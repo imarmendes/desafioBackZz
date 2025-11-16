@@ -61,3 +61,4 @@ Thumbs.db
 
 # Arquivos temporários do Nodemon
 *.log
+/src/generated/prisma

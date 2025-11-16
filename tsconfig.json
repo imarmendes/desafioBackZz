@@ -7,7 +7,8 @@
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "commonjs",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "target": "es2020",
     "types": ["node"],
     // For nodejs:
@@ -42,5 +43,11 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true
-  }
+  },
+  // Exclude files that live outside the configured rootDir
+  "exclude": [
+    "prisma.config.ts",
+    "node_modules",
+    "dist"
+  ]
 }
