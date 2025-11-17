@@ -1,4 +1,3 @@
-// src/docs/swagger.ts
 import swaggerJsdoc from "swagger-jsdoc";
 
 const options: swaggerJsdoc.Options = {
@@ -9,7 +8,7 @@ const options: swaggerJsdoc.Options = {
       version: "1.0.0",
       description: "Documentação da API (Auth e Products)",
     },
-    servers: [{ url: "http://localhost:3000" }],
+    servers: [{ url: process.env.BASE_URL }],
     components: {
       securitySchemes: {
         bearerAuth: {
@@ -20,7 +19,6 @@ const options: swaggerJsdoc.Options = {
       },
     },
   },
-  // Ajuste os globs se necessário
   apis: [
     "src/app.ts",
     "src/api/routes/*.ts",
