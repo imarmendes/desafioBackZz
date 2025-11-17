@@ -15,11 +15,11 @@ export const productController = {
 
   async create(req: Request, res: Response, next: NextFunction) {
     try {
-      const { name, price } = req.body;
+      const { name, price, description } = req.body;
       // @ts-ignore
       const userId = req.user.id;
 
-      const product = await productService.create(userId, name, price);
+      const product = await productService.create(userId, name, price, description);
       res.json(product);
     } catch (e) {
       next(e);
@@ -39,12 +39,12 @@ export const productController = {
 
   async update(req: Request, res: Response, next: NextFunction) {
     try {
-      const { name, price } = req.body;
+      const { name, price, description } = req.body;
       const { id } = req.params;
       // @ts-ignore
       const userId = req.user.id;
 
-      const product = await productService.update(id, userId, name, price);
+      const product = await productService.update(id, userId, name, price, description);
       res.json(product);
     } catch (e) {
       next(e);
