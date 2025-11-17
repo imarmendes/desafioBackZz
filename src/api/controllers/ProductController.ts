@@ -26,6 +26,17 @@ export const productController = {
     }
   },
 
+    async find(req: Request, res: Response, next: NextFunction) {
+    try {
+      const { productId } = req.body;
+
+      const product = await productService.find(productId);
+      res.json(product);
+    } catch (e) {
+      next(e);
+    }
+  },
+
   async update(req: Request, res: Response, next: NextFunction) {
     try {
       const { name, price } = req.body;

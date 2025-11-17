@@ -11,6 +11,12 @@ export const productService = {
     });
   },
 
+  async find(productId: string) {
+    return prisma.product.findUnique({
+      where: { id: productId },
+    });
+  },
+
   async update(productId: string, userId: string, name: string, price: number) {
     return prisma.product.update({
       where: { id: productId },

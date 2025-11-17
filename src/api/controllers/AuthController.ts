@@ -21,4 +21,12 @@ export const authController = {
       next(e);
     }
   },
+
+    async teste(req: Request, res: Response, next: NextFunction) {
+    try {
+      res.json("requisição autorizada");
+    } catch (e) {
+      next(e);
+    }
+  },
 };
