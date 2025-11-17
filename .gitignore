@@ -1,0 +1,64 @@
+# Arquivos de Dependências
+###########################
+
+# Diretório onde o npm armazena todos os pacotes instalados
+/node_modules
+
+# Logs do npm (pode ser gerado em alguns casos)
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Variáveis de Ambiente
+###########################
+
+# Arquivos de configuração de ambiente, contendo chaves, senhas, etc.
+# É crucial não versionar este arquivo!
+.env
+.env.local
+.env.*.local
+
+# Arquivos de Compilação e Build
+##################################
+
+# Pasta de saída do compilador TypeScript (configurada como 'outDir' no tsconfig.json)
+# Se você usou o padrão que sugeri, é 'dist'.
+/dist
+
+# Arquivos gerados pelo TypeScript
+*.tsbuildinfo
+
+# IDEs e Editores
+###########################
+
+# VSCode
+.vscode/*
+!.vscode/settings.json    # Permite versionar settings.json (opcional)
+!.vscode/tasks.json       # Permite versionar tasks.json (opcional)
+!.vscode/launch.json      # Permite versionar launch.json (opcional)
+!.vscode/extensions.json  # Permite versionar extensions.json (opcional)
+
+# JetBrains IDEs (WebStorm, IntelliJ)
+.idea
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Testes e Cobertura (se estiver usando)
+##################################
+/coverage
+
+# Cache e Outros
+##################################
+
+# Cache de pacotes
+.npm
+.eslintcache
+
+# Arquivos temporários do Nodemon
+*.log
+/src/generated/prisma

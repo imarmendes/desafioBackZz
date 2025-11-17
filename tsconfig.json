@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    // Diretórios
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // Ambiente Node comum
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "target": "ES2020",
+    "types": ["node"],
+
+    // Saída
+    "sourceMap": true,
+    "declaration": false,
+    "declarationMap": false,
+
+    // Regras de tipo
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+
+    // Outras configs úteis
+    "forceConsistentCasingInFileNames": true
+  },
+
+  "include": ["src"], 
+  "exclude": ["node_modules", "dist"]
+}

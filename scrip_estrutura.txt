@@ -1,0 +1,52 @@
+# ===== Criar pastas =====
+mkdir src\config
+mkdir src\core
+mkdir src\core\models
+mkdir src\core\dtos
+mkdir src\core\services
+mkdir src\core\utils
+
+mkdir src\api
+mkdir src\api\controllers
+mkdir src\api\routes
+mkdir src\api\middlewares
+
+mkdir src\docs
+mkdir src\docs\schemas
+
+mkdir src\prisma
+
+# ===== Criar arquivos =====
+
+# config
+ni src\config\env.ts -ItemType File
+ni src\config\db.ts -ItemType File
+
+# core
+ni src\core\models\.gitkeep -ItemType File
+ni src\core\dtos\UserDTO.ts -ItemType File
+ni src\core\dtos\ProductDTO.ts -ItemType File
+ni src\core\services\UserService.ts -ItemType File
+ni src\core\services\ProductService.ts -ItemType File
+ni src\core\utils\jwt.ts -ItemType File
+ni src\core\utils\hash.ts -ItemType File
+
+# api
+ni src\api\controllers\AuthController.ts -ItemType File
+ni src\api\controllers\ProductController.ts -ItemType File
+ni src\api\routes\authRoutes.ts -ItemType File
+ni src\api\routes\productRoutes.ts -ItemType File
+ni src\api\middlewares\authMiddleware.ts -ItemType File
+ni src\api\middlewares\errorHandler.ts -ItemType File
+
+# docs
+ni src\docs\swagger.ts -ItemType File
+ni src\docs\schemas\UserSchema.ts -ItemType File
+ni src\docs\schemas\ProductSchema.ts -ItemType File
+
+# prisma
+ni src\prisma\schema.prisma -ItemType File
+
+# root files
+ni src\app.ts -ItemType File
+ni src\server.ts -ItemType File
