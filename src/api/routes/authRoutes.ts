@@ -54,6 +54,5 @@ router.post("/register", authController.register);
  *         description: Autenticado com sucesso
  */
 router.post("/login", authController.login);
-// router.get("/teste", authController.teste);
 
 export default router;
