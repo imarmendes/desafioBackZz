@@ -28,9 +28,9 @@ export const productController = {
 
     async find(req: Request, res: Response, next: NextFunction) {
     try {
-      const { productId } = req.body;
-
-      const product = await productService.find(productId);
+      const { id } = req.params;
+      const product = await productService.find(id);
+        
       res.json(product);
     } catch (e) {
       next(e);

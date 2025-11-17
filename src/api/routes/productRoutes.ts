@@ -54,24 +54,19 @@ router.post("/", productController.create);
 
 /**
  * @openapi
- * /api/products/find:
- *   post:
+ * /api/products/{id}:
+ *   get:
  *     summary: Encontra um produto pelo ID
  *     tags:
  *       - Products
  *     security:
  *       - bearerAuth: []
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             type: object
- *             properties:
- *               productId:
- *                 type: string
- *             required:
- *               - productId
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
  *     responses:
  *       '200':
  *         description: Produto encontrado
@@ -80,7 +75,7 @@ router.post("/", productController.create);
  *             schema:
  *               $ref: '#/components/schemas/Product'
  */
-router.post("/find", productController.find);
+router.get("/:id", productController.find);
 
 /**
  * @openapi
