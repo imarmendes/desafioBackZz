@@ -14,14 +14,11 @@ const app = express();
 app.use(cors());
 app.use(json());
 
-// Rotas
 app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);
 
-// Swagger
 app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-// Middleware global de erros
 app.use(errorHandler);
 
 export default app;

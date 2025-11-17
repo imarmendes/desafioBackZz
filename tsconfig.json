@@ -12,8 +12,8 @@
 
     // Saída
     "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
+    "declaration": false,
+    "declarationMap": false,
 
     // Regras de tipo
     "strict": true,
@@ -23,7 +23,7 @@
     // Outras configs úteis
     "forceConsistentCasingInFileNames": true
   },
-  
+
   "include": ["src"], 
   "exclude": ["node_modules", "dist"]
 }
