@@ -189,7 +189,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
 ## 🗂️ Estrutura do projeto
 
-``
+```plaintext
 desafioBackZz/
 ├── prisma/
 │   ├── schema.prisma         # Schema do banco de dados
@@ -212,36 +212,38 @@ desafioBackZz/
 ├── package.json              # Dependências
 ├── tsconfig.json             # Configuração TypeScript
 └── README.md                 # Este arquivo
-``
+```
 
 ## 🗄️ Modelo de dados
 
 ### User
-``typescript
+
+```typescript
 {
-  id: string (UUID)
-  name: string
-  email: string (unique)
-  password: string (hashed)
-  products: Product[]
-  createdAt: DateTime
-  updatedAt: DateTime
+  id: string;          // UUID
+  name: string;
+  email: string;       // unique
+  password: string;    // hashed
+  products: Product[];
+  createdAt: DateTime;
+  updatedAt: DateTime;
 }
-``
+```
 
 ### Product
-``typescript
+
+```typescript
 {
-  id: string (UUID)
-  name: string
-  price: number
-  description?: string (opcional)
-  userId: string
-  user: User
-  createdAt: DateTime
-  updatedAt: DateTime
+  id: string;          // UUID
+  name: string;
+  price: number;
+  description?: string; // opcional
+  userId: string;
+  user: User;
+  createdAt: DateTime;
+  updatedAt: DateTime;
 }
-``
+```
 
 ## 🔧 Scripts disponíveis
 
